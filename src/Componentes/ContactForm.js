@@ -12,20 +12,14 @@ const ContactForm = () => {
       telefono,
     };
 
-    fetch('http://localhost:3001/contactos', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(newContact),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log('Contacto agregado:', data);
-        setNombre('');
-        setTelefono('');
+    fetch('http://localhost:3001/nombrec', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(newContact),
       })
-      .catch((error) => console.error('Error al agregar el contacto:', error));
+      
   };
 
   return (
