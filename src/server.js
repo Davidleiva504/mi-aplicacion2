@@ -1,19 +1,19 @@
-
-
 const express = require('express');
 const app = express();
+const cors = require('cors');
+app.use(cors());
 app.use(express.json());
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
-
 const PORT = 3001;
 
 const mysql = require('mysql');
 
+
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'Leiva',
-  password: 'Hola1234',
+  password: 'Hola1212',
   database: 'directorio',
 });
 
